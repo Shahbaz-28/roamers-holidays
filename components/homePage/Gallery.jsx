@@ -34,6 +34,7 @@ export default function Gallery() {
                   src={destination.image}
                   alt={`Scenic view of ${destination.name}`}
                   fill
+                  loading="lazy"
                   className="object-cover transition-transform duration-300 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent transition-opacity duration-300 group-hover:opacity-80" />

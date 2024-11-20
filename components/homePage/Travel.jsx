@@ -15,6 +15,7 @@ export default function Travel() {
               src="/images/travelStat.svg"
               alt="Traveler with backpack"
               width={500}
+              loading="lazy"
               height={600}
               className="mx-auto w-full max-w-[300px] sm:max-w-[400px] lg:max-w-[500px]"
             />
