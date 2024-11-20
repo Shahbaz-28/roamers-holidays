@@ -4,7 +4,7 @@ import Slider from "react-slick"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 
-export default function Component() {
+export default function OurClient() {
   const settings = {
     dots: false,
     infinite: true,

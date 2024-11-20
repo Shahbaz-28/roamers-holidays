@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Facebook, Instagram, Mail, MapPin, Phone, Twitter } from 'lucide-react'
-import { FaWhatsapp } from 'react-icons/fa'  // Import WhatsApp icon from react-icons
+import { FaWhatsapp } from 'react-icons/fa'
 import Image from "next/image"
 
 export default function ContactPage() {
