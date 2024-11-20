@@ -36,15 +36,12 @@ export default function Navbar() {
             {/* Logo */}
             <Link href="/" className="flex items-center space-x-2">
               <Image
-                src="/placeholder.svg"
+                src="/images/logo1.jpg"
                 alt="Rebel Rover Logo"
-                width={40}
-                height={40}
-                className="rounded-full"
+                width={120}
+                height={120}
+                className="rounded-md"
               />
-              <span className="text-xl font-bold text-white">
-                Romers Holidays
-              </span>
             </Link>
 
             {/* Desktop Navigation */}

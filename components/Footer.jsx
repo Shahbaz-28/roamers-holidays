@@ -24,7 +24,15 @@ export default function Footer() {
       <div className="relative z-10 container mx-auto px-4">
         <div className="flex flex-col sm:flex-row justify-between items-center">
           {/* Company Name */}
-          <h2 className="text-xl font-bold mb-4 sm:mb-0">Roamers Holidays</h2>
+          <Link href="/" className="flex items-center space-x-2">
+              <Image
+                src="/images/logo1.jpg"
+                alt="Rebel Rover Logo"
+                width={120}
+                height={120}
+                className="rounded-md"
+              />
+            </Link>
 
           {/* Copyright */}
           <div className="text-sm">
