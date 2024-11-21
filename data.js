@@ -37,7 +37,7 @@ const travelPackages = {
     description: "An island nation in East Asia, known for its rich culture, advanced technology, stunning landscapes, and iconic landmarks like cherry blossoms and Mount Fuji.",
     rating: 4.7,
     btn: "Read More",
-    url:"http://localhost:3000/packages-details/japan",
+    url:"/packages-details/japan",
     itinerary: {
       day1: {
         title: "Tokyo Arrival",
@@ -89,7 +89,7 @@ const travelPackages = {
     description: "A continent in the Northern Hemisphere, known for its rich history, cultural diversity, and iconic landmarks, blending ancient traditions with modern developments.",
     rating: 4.7,
     btn: "Read More",
-    url:"http://localhost:3000/packages-details/europe",
+    url:"/packages-details/europe",
     itinerary: {
       day1: {
         title: "Arrival in London",
@@ -185,7 +185,7 @@ const travelPackages = {
       description: "Australia, located in the Southern Hemisphere, is known for its unique wildlife, iconic landmarks like the Sydney Opera House, and diverse landscapes.",
       rating: 4.7,
       btn: "Read More",
-      url:"http://localhost:3000/packages-details/australia",
+      url:"/packages-details/australia",
     price: 245000,
     itinerary: {
       day1: {
