@@ -3,7 +3,6 @@
 import React, { useRef } from 'react'
 import Slider from 'react-slick'
 import Image from 'next/image'
-import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { motion } from 'framer-motion'
 
 const slides = [
@@ -27,7 +26,7 @@ const slides = [
   },
 ]
 
-export default function TravelHero() {
+export default function HeroSec() {
   const sliderRef = useRef(null)
 
   const settings = {
@@ -84,7 +83,7 @@ export default function TravelHero() {
           </div>
         ))}
       </Slider>
-      <button
+      {/* <button
         onClick={() => sliderRef.current?.slickPrev()}
         className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/20 text-white p-3 rounded-full hover:bg-white/40 transition-colors duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-white backdrop-blur-sm"
         aria-label="Previous slide"
@@ -97,7 +96,7 @@ export default function TravelHero() {
         aria-label="Next slide"
       >
         <ChevronRight className="w-6 h-6" />
-      </button>
+      </button> */}
     </div>
   )
 }

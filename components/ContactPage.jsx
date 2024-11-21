@@ -19,15 +19,16 @@ export default function ContactPage() {
           <CardContent className="space-y-6">
             <div className="flex items-center space-x-3">
               <Phone className="h-5 w-5" />
-              <span>+1 (555) 123-4567</span>
+              <span>91-8108993222</span>
+              <span>+91-8976116296</span>
             </div>
             <div className="flex items-center space-x-3">
               <Mail className="h-5 w-5" />
-              <span>contact@travelexample.com</span>
+              <span>roamersholidays@gmail.com</span>
             </div>
             <div className="flex items-center space-x-3">
               <MapPin className="h-5 w-5" />
-              <span>123 Adventure St, Travelville, TX 12345</span>
+              <span>Office: 003, Bldg No. 06, Gurusadan Comlplex, Shivaji Chowk, Badalapur East - 421503</span>
             </div>
             <div className="flex space-x-4 mt-6">
               <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="bg-primary-foreground text-primary rounded-full p-2 hover:bg-accent hover:text-accent-foreground transition-colors">
