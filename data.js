@@ -1,9 +1,43 @@
+// export const travelCards = [
+//   {
+//     name: "Paris",
+//     price: "₹22,425",
+//     description: "Experience the romance and charm of the City of Light.",
+//     rating: 4.8,
+//     image: "/images/paris.jpg",
+//     buttonText: "Book Now",
+//   },
+//   {
+//     name: "Swiss Alps",
+//     price: "₹22,425",
+//     description: "Discover breathtaking mountain views and pristine nature.",
+//     rating: 4.9,
+//     image: "/images/swissalps.jpg",
+//     buttonText: "Book Now",
+//     availableAllYear: true,
+//     flightIncluded: true,
+//   },
+//   {
+//     name: "Thailand",
+//     price: "₹22,425",
+//     description: "Explore exotic beaches and vibrant cultural experiences.",
+//     rating: 4.7,
+//     image: "/images/thailand.jpg",
+//     buttonText: "Book Now",
+//   },
+// ];
+
 const travelPackages = {
   japan: {
     slug: "japan01",
     country: "Japan",
-    images:"https://images.pexels.com/photos/1440476/pexels-photo-1440476.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    images:
+      "https://images.pexels.com/photos/1440476/pexels-photo-1440476.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     price: 175000,
+    description: "An island nation in East Asia, known for its rich culture, advanced technology, stunning landscapes, and iconic landmarks like cherry blossoms and Mount Fuji.",
+    rating: 4.7,
+    btn: "Read More",
+    url:"http://localhost:3000/packages-details/japan",
     itinerary: {
       day1: {
         title: "Tokyo Arrival",
@@ -49,8 +83,13 @@ const travelPackages = {
   europe: {
     slug: "europe02",
     country: "Multiple (Europe)",
-    images:"https://images.pexels.com/photos/753337/pexels-photo-753337.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    images:
+      "https://images.pexels.com/photos/753337/pexels-photo-753337.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     price: 214000,
+    description: "A continent in the Northern Hemisphere, known for its rich history, cultural diversity, and iconic landmarks, blending ancient traditions with modern developments.",
+    rating: 4.7,
+    btn: "Read More",
+    url:"http://localhost:3000/packages-details/europe",
     itinerary: {
       day1: {
         title: "Arrival in London",
@@ -141,62 +180,68 @@ const travelPackages = {
   australia: {
     slug: "australia03",
     country: "Australia",
-    images:"https://images.pexels.com/photos/2845013/pexels-photo-2845013.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    images:
+      "https://images.pexels.com/photos/2845013/pexels-photo-2845013.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      description: "Australia, located in the Southern Hemisphere, is known for its unique wildlife, iconic landmarks like the Sydney Opera House, and diverse landscapes.",
+      rating: 4.7,
+      btn: "Read More",
+      url:"http://localhost:3000/packages-details/australia",
     price: 245000,
     itinerary: {
       day1: {
         title: "Mumbai - Sydney",
         details:
-          "Mumbai as per the scheduled flight departure time proceed to Sydney. Upon arrival, proceed to the city. Welcome to Sydney – largest city of Australia situated on the coast between Blue Mountains and Tasman Sea, also listed as one of the world’s most livable cities. Transfer to hotel and relax."
+          "Mumbai as per the scheduled flight departure time proceed to Sydney. Upon arrival, proceed to the city. Welcome to Sydney – largest city of Australia situated on the coast between Blue Mountains and Tasman Sea, also listed as one of the world’s most livable cities. Transfer to hotel and relax.",
       },
       day2: {
         title: "Sydney - Blue Mountain Tour",
         details:
-          "Breakfast. Coach pick up commences Blue Mountain Tour. Upon arrival at Blue Mountain, take a tour of Katoomba & visit Echo Point to see the 3 SISTERS Rock Formation. The Blue Mountains was declared a World Heritage park in November 2000. Visit the Featherdale Wildlife Park – cuddle the Koalas & play with the Kangaroos. Evening return to Sydney."
+          "Breakfast. Coach pick up commences Blue Mountain Tour. Upon arrival at Blue Mountain, take a tour of Katoomba & visit Echo Point to see the 3 SISTERS Rock Formation. The Blue Mountains was declared a World Heritage park in November 2000. Visit the Featherdale Wildlife Park – cuddle the Koalas & play with the Kangaroos. Evening return to Sydney.",
       },
       day3: {
-        title: "Sydney - Opera House - Sydney Tower - Sea Aquarium - Showboat Cruise",
+        title:
+          "Sydney - Opera House - Sydney Tower - Sea Aquarium - Showboat Cruise",
         details:
-          "After breakfast, take a city tour starting with Australia’s most famous surf beach Bondi. City tour includes the Rocks, the Opera House, the Harbour Bridge, Darling Harbour, Chinatown, and Cosmopolitan Kings Cross. Visit the Sydney Opera Theatre, Sydney Sea Life Aquarium, and Sydney Tower for breathtaking views. Drop at hotel to relax for a while, followed by a Showboat Dinner Cruise featuring performances and dinner. Overnight in Sydney."
+          "After breakfast, take a city tour starting with Australia’s most famous surf beach Bondi. City tour includes the Rocks, the Opera House, the Harbour Bridge, Darling Harbour, Chinatown, and Cosmopolitan Kings Cross. Visit the Sydney Opera Theatre, Sydney Sea Life Aquarium, and Sydney Tower for breathtaking views. Drop at hotel to relax for a while, followed by a Showboat Dinner Cruise featuring performances and dinner. Overnight in Sydney.",
       },
       day4: {
         title: "Sydney - Cairns - Kuranda Rainforest",
         details:
-          "After breakfast, transfer to Sydney Airport for flight departing to Cairns. Arrive at Cairns Domestic Airport, pick up by coach & transfer to Kuranda Rainforest. Explore the Skyrail Rainforest Cableway, traverse the tropical rainforest with your guide aboard an Army Duck amphibious vehicle. Evening free. Overnight in Cairns."
+          "After breakfast, transfer to Sydney Airport for flight departing to Cairns. Arrive at Cairns Domestic Airport, pick up by coach & transfer to Kuranda Rainforest. Explore the Skyrail Rainforest Cableway, traverse the tropical rainforest with your guide aboard an Army Duck amphibious vehicle. Evening free. Overnight in Cairns.",
       },
       day5: {
         title: "Cairns - Great Barrier Reef",
         details:
-          "Breakfast at the hotel. Transfer to Big Cat Green Island Reef Cruises. Relax on the beach or experience the underwater marvels through a glass-bottom boat. Evening return to the hotel."
+          "Breakfast at the hotel. Transfer to Big Cat Green Island Reef Cruises. Relax on the beach or experience the underwater marvels through a glass-bottom boat. Evening return to the hotel.",
       },
       day6: {
         title: "Cairns - Melbourne",
         details:
-          "Morning flight to Melbourne. See landmarks like Federation Square, St. Paul’s Cathedral, and the Royal Exhibition Building. Drive to Phillip Island and witness the Penguin Parade. Overnight in Melbourne."
+          "Morning flight to Melbourne. See landmarks like Federation Square, St. Paul’s Cathedral, and the Royal Exhibition Building. Drive to Phillip Island and witness the Penguin Parade. Overnight in Melbourne.",
       },
       day7: {
         title: "Melbourne - Great Ocean Road",
         details:
-          "Breakfast at the hotel; Experience the iconic Great Ocean Road with stunning ocean views, the Twelve Apostles, Otways National Park, and more. Return to Melbourne for overnight stay."
+          "Breakfast at the hotel; Experience the iconic Great Ocean Road with stunning ocean views, the Twelve Apostles, Otways National Park, and more. Return to Melbourne for overnight stay.",
       },
       day8: {
         title: "Melbourne - MCG Visit - Phillip Island",
         details:
-          "Visit Melbourne Cricket Ground from inside (subject to availability). Proceed to Phillip Island to witness the spectacular world-famous Penguin Parade. Overnight in Melbourne."
+          "Visit Melbourne Cricket Ground from inside (subject to availability). Proceed to Phillip Island to witness the spectacular world-famous Penguin Parade. Overnight in Melbourne.",
       },
       day9: {
         title: "Australia - India",
         details:
-          "Early morning transfer to Melbourne Airport for the return flight to Mumbai. Tour concludes."
-      }
+          "Early morning transfer to Melbourne Airport for the return flight to Mumbai. Tour concludes.",
+      },
     },
     inclusions: {
       accommodation: "All accommodations as per itinerary",
       mealPlan: "Breakfast and Dinner",
       sightseeing: "Entry fees for all places mentioned in the itinerary",
-      transfers: "All transfers and transportation as per the itinerary"
-    }
-  }
+      transfers: "All transfers and transportation as per the itinerary",
+    },
+  },
 };
 
 export default travelPackages;

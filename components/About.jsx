@@ -20,7 +20,7 @@ export default function About() {
     {
       icon: <Target className="w-12 h-12 text-blue-600 mb-4" />,
       title: "Our Mission",
-      description: "We&apos;re committed to inspiring and empowering travelers by providing exceptional service, innovative travel solutions, and fostering responsible tourism. We&apos;re dedicated to creating positive impacts on the communities we visit."
+      description: "We&apos;re committed to inspiring and empowering travelers by providing exceptional service, innovative travel solutions, and fostering responsible tourism. We're dedicated to creating positive impacts on the communities we visit."
     }
   ]
 

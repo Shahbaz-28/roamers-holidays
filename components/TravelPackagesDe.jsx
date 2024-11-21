@@ -31,6 +31,8 @@ function TravelPackagesDe({ details }) {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  console.log("data",details)
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}

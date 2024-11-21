@@ -1,54 +1,19 @@
+'use client'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter } from "@/components/ui/card"
 import { Star, Plane, Calendar } from 'lucide-react'
 import Image from "next/image"
+import travelPackages from "@/data"
 
-const destinations = [
-  {
-    name: "Paris",
-    image: "/images/paris.jpg",
-    price: 22425,
-    description: "Experience the romance and charm of the City of Light.",
-    rating: 4.8,
-  },
-  {
-    name: "Swiss Alps",
-    image: "/images/swissalps.jpg",
-    price: 22425,
-    description: "Discover breathtaking mountain views and pristine nature.",
-    rating: 4.9,
-  },
-  {
-    name: "Thailand",
-    image: "/images/thailand.jpg",
-    price: 22425,
-    description: "Explore exotic beaches and vibrant cultural experiences.",
-    rating: 4.7,
-  },
-  {
-    name: "Taiwan",
-    image: "/images/taiwan.jpg",
-    price: 22425,
-    description: "Immerse yourself in a blend of modern cities and natural wonders.",
-    rating: 4.6,
-  },
-  {
-    name: "Indonesia",
-    image: "/images/indonesia.jpg",
-    price: 22425,
-    description: "Discover diverse islands, rich culture, and stunning landscapes.",
-    rating: 4.8,
-  },
-  {
-    name: "Singapore",
-    image: "/images/singapore.jpg",
-    price: 22425,
-    description: "Experience a futuristic city-state with incredible attractions.",
-    rating: 4.9,
-  },
-]
 
 export default function Destinations() {
+
+  const cardDetails = Object.values(travelPackages)
+
+
+  const handleClick = (url) => {
+    window.location.href = url; // Redirects to the URL
+  }
   return (
     <div className="container mx-auto  py-8 sm:py-6 px-4 border border-gray-200 rounded-lg shadow-sm mt-6">
       <div className="text-center mb-8 sm:mb-12">
@@ -57,15 +22,15 @@ export default function Destinations() {
         </h1>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
-        {destinations.map((destination, index) => (
+        {cardDetails.map((destination, index) => (
           <Card
             key={index}
             className="group overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all duration-300 bg-white"
           >
             <div className="relative overflow-hidden">
               <Image
-                src={destination.image}
-                alt={`Scenic view of ${destination.name}`}
+                src={destination.images}
+                alt={`Scenic view of ${destination.country}`}
                 width={400}
                 height={224}
                 className="w-full h-48 sm:h-56 object-cover transition-transform duration-300 group-hover:scale-110"
@@ -85,7 +50,7 @@ export default function Destinations() {
             <CardContent className="p-3 sm:p-4">
               <div className="flex justify-between items-center mb-2">
                 <h2 className="text-lg sm:text-xl font-semibold text-sky-900 group-hover:text-sky-700 transition-colors duration-300">
-                  {destination.name}
+                  {destination.country}
                 </h2>
                 <div className="flex items-center bg-sky-100 rounded-full px-2 py-1">
                   <span className="text-xs sm:text-sm font-medium text-sky-900">₹{destination.price.toLocaleString('en-IN')}</span>
@@ -110,8 +75,10 @@ export default function Destinations() {
                 </div>
                 <span className="text-xs sm:text-sm font-medium text-sky-900">{destination.rating.toFixed(1)}</span>
               </div>
-              <Button size="sm" className="bg-amber-500 hover:bg-amber-600 text-white transition-colors text-xs sm:text-sm">
-                Book Now
+              <Button size="sm" className="bg-amber-500 hover:bg-amber-600 text-white transition-colors text-xs sm:text-sm"
+              onClick={() => handleClick(destination.url)}
+              >
+                {destination.btn}
               </Button>
             </CardFooter>
           </Card>

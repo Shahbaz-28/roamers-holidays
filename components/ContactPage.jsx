@@ -8,7 +8,7 @@ export default function ContactPage() {
     <div className="container mt-10 mx-auto px-4 py-12 max-w-5xl">
       <h1 className="text-4xl font-bold text-center mb-8">Get in Touch</h1>
       <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-        We`&lsquo;`re here to help plan your perfect adventure. Reach out to us through any of the methods below, and we`&lsquo;`ll get back to you as soon as possible!
+        We&apos;re here to help plan your perfect adventure. Reach out to us through any of the methods below, and we&apos;ll get back to you as soon as possible!
       </p>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">

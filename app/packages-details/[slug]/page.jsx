@@ -1,6 +1,7 @@
 import React from "react";
 import travelPackages from "../../../data"; // Ensure correct path to your data file
 import TravelPackagesDe from "../../../components/TravelPackagesDe";
+import Destination from "../../../components/homePage/Destination";
 
 const Page = ({ params }) => {
   const { slug } = params;
@@ -13,8 +14,8 @@ const Page = ({ params }) => {
 
   return (
     <div>
-      {/* Pass packageDetails to the child component */}
       <TravelPackagesDe details={packageDetails} />
+       <Destination />
     </div>
   );
 };

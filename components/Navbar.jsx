@@ -53,7 +53,7 @@ export default function Navbar() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
-      <div className="bg-white/70 backdrop-blur-sm border-b border-gray-200">
+      <div className="bg-white/50 backdrop-blur-sm border-b border-gray-200">
         <div className="container mx-auto">
           <nav className="flex items-center justify-between h-16 px-4">
             {/* Logo */}
