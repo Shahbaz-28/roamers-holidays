@@ -37,15 +37,15 @@ export default function About() {
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-transparent" />
         </div>
-        <div className="relative h-full flex flex-col items-center justify-center text-center text-white">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in-down">About Us</h1>
-          <p className="text-xl md:text-2xl max-w-2xl mx-auto px-4 mb-8 animate-fade-in-up">
+        <div className="relative h-full flex flex-col items-center justify-center text-center text-[#FCFCD8]">
+          <h1 className="text-5xl md:text-7xl font-bold mb-1 animate-fade-in-down">About Us</h1>
+          <p className="f-Nohemi-Light-BF6438cc583f70b text-xl md:text-2xl max-w-2xl mx-auto px-4 mb-8 animate-fade-in-up">
             Your Gateway to Unforgettable Adventures
           </p>
           <Button 
             variant="outline" 
             size="lg"
-            className="bg-white text-blue-500 font-bold hover:text-blue-900 transition-all duration-300"
+            className="bg-[#30303066] backdrop-blur-lg text-[#FCFCD8] font-bold border-[1px] border-[#FCFCD80F] transition-all duration-300 px-6 rounded-[8px]"
             onClick={() => {
               const featuresSection = document.getElementById('features')
               featuresSection?.scrollIntoView({ behavior: 'smooth' })

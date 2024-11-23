@@ -1,11 +1,11 @@
 'use client'
-
+import "@fontsource/poppins"; // Defaults to weight 400
 import Image from "next/image"
 import CountUp from "react-countup"
 
 export default function Travel() {
   return (
-    <div className="container mx-auto px-4 py-8 sm:py-12 lg:py-16 border border-gray-200 rounded-lg shadow-sm">
+    <div className="container mx-auto px-4 py-8 sm:py-12 lg:py-16 border border-[#3030304D] rounded-lg shadow-sm my-12">
       <div className="grid lg:grid-cols-2 gap-8 items-center">
         {/* Left side with image */}
         <div className="relative mx-auto max-w-md lg:max-w-full transition-transform duration-300 hover:scale-105">
@@ -37,10 +37,10 @@ export default function Travel() {
         {/* Right side content */}
         <div className="space-y-6 sm:space-y-8 text-center lg:text-left">
           <div>
-            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4 text-blue-900 leading-tight">
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4 text-sky-900 leading-tight">
               We re helping you find your dream destination
             </h1>
-            <p className="text-sm sm:text-base text-blue-800 max-w-lg mx-auto lg:mx-0">
+            <p className="f-Nohemi-Light-BF6438cc583f70b text-sm sm:text-base text-gray-600 max-w-lg mx-auto lg:mx-0 !leading-[22px]">
               Discover your perfect getaway with our curated selection of holiday packages, luxury hotels, and premium airlines. Let us guide you to unforgettable experiences around the world.
             </p>
           </div>
@@ -48,28 +48,28 @@ export default function Travel() {
           <div className="grid grid-cols-2 gap-4 sm:gap-8 bg-gray-50 p-4 sm:p-6 rounded-lg">
             {/* Stats */}
             <div className="space-y-1 sm:space-y-2 bg-white p-3 rounded-md shadow-sm">
-              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-orange-500">
+              <h3 className="f-Nohemi-Light-BF6438cc583f70b text-2xl sm:text-3xl lg:text-4xl font-bold text-orange-500">
                 <CountUp start={0} end={500} duration={2.5} />+
               </h3>
-              <p className="text-xs sm:text-sm text-gray-600">Holiday Package</p>
+              <p className="f-Nohemi-Light-BF6438cc583f70b text-xs sm:text-sm text-gray-600">Holiday Package</p>
             </div>
             <div className="space-y-1 sm:space-y-2 bg-white p-3 rounded-md shadow-sm">
-              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-orange-500">
+              <h3 className="f-Nohemi-Light-BF6438cc583f70b text-2xl sm:text-3xl lg:text-4xl font-bold text-orange-500">
                 <CountUp start={0} end={100} duration={2.5} />
               </h3>
-              <p className="text-xs sm:text-sm text-gray-600">Luxury Hotel</p>
+              <p className="f-Nohemi-Light-BF6438cc583f70b text-xs sm:text-sm text-gray-600">Luxury Hotel</p>
             </div>
             <div className="space-y-1 sm:space-y-2 bg-white p-3 rounded-md shadow-sm">
-              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-orange-500">
+              <h3 className="f-Nohemi-Light-BF6438cc583f70b text-2xl sm:text-3xl lg:text-4xl font-bold text-orange-500">
                 <CountUp start={0} end={7} duration={2.5} />
               </h3>
-              <p className="text-xs sm:text-sm text-gray-600">Premium Airlines</p>
+              <p className="f-Nohemi-Light-BF6438cc583f70b text-xs sm:text-sm text-gray-600">Premium Airlines</p>
             </div>
             <div className="space-y-1 sm:space-y-2 bg-white p-3 rounded-md shadow-sm">
-              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-orange-500">
+              <h3 className="f-Nohemi-Light-BF6438cc583f70b text-2xl sm:text-3xl lg:text-4xl font-bold text-orange-500">
                 <CountUp start={0} end={2000} duration={2.5} />+
               </h3>
-              <p className="text-xs sm:text-sm text-gray-600">Happy Customer</p>
+              <p className="f-Nohemi-Light-BF6438cc583f70b text-xs sm:text-sm text-gray-600">Happy Customer</p>
             </div>
           </div>
         </div>
