@@ -4,7 +4,7 @@ import CountUp from "react-countup"
 
 export default function Travel() {
   return (
-    <div className="container mx-auto px-4 py-8 sm:py-12 lg:py-16 border border-[#3030304D] rounded-lg shadow-sm my-12">
+    <div className="container mx-auto px-2 py-8 sm:py-12 lg:py-16 border  rounded-lg shadow-sm my-12">
       <div className="grid lg:grid-cols-2 gap-8 items-center">
         {/* Left side with image */}
         <div className="relative mx-auto max-w-md lg:max-w-full transition-transform duration-300 hover:scale-105">
@@ -14,7 +14,6 @@ export default function Travel() {
               src="/images/travelStat.svg"
               alt="Traveler with backpack"
               width={500}
-              loading="lazy"
               height={600}
               className="mx-auto w-full max-w-[300px] sm:max-w-[400px] lg:max-w-[500px]"
             />

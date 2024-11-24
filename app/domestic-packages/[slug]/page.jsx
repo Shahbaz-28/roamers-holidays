@@ -1,7 +1,7 @@
 import React from "react";
 import domesticPackages from "../../../domesticData";
 import Destination from "../../../components/homePage/InternationalCard";
-import DomesticPackg from "@/components/DomesticPackg"
+import DomesticPackg from "@/components/DomesticPackg";
 
 const Page = ({ params }) => {
   const { slug } = params;
@@ -14,8 +14,8 @@ const Page = ({ params }) => {
 
   return (
     <div>
-      <DomesticPackg details={packageDetails}/>
-       <Destination />
+      <DomesticPackg details={packageDetails} />
+      <Destination />
     </div>
   );
 };

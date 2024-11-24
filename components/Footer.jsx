@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Footer() {
   return (
     <>
-      <footer className="bg-[#003531]">
+      <footer className="bg-sky-800">
         <img src="/images/footer-img.svg" alt=""  />
         <div className="container mx-auto px-6 py-12">
           <div className="grid md:grid-cols-11 gap-8">
@@ -25,48 +25,9 @@ export default function Footer() {
               </p>
             </div>
 
-            {/* Product Section */}
-            <div className="col-span-2">
-              <h3 className="text-white font-semibold mb-6">PRODUCT</h3>
-              <ul className="space-y-4">
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-300 hover:text-white text-md"
-                  >
-                    Why move?
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-300 hover:text-white text-md"
-                  >
-                    Features
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-300 hover:text-white text-md"
-                  >
-                    Omnichannel
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-300 hover:text-white text-md"
-                  >
-                    Community
-                  </a>
-                </li>
-              </ul>
-            </div>
-
             {/* Company Section */}
             <div className="col-span-2">
-              <h3 className="text-white font-semibold mb-6">COMPANY</h3>
+              <h3 className="text-white font-semibold mb-6">Quick Links</h3>
               <ul className="space-y-4">
                 <li>
                   <a
@@ -184,7 +145,7 @@ export default function Footer() {
           </div>
         </div>
       </footer>
-      <div className="sub-footer relative bg-teal-900 text-white py-6">
+      <div className="sub-footer relative  text-white py-6">
         {/* <div className="absolute inset-0">
         <Image
           src="/images/AboutBanner.svg"
@@ -195,7 +156,7 @@ export default function Footer() {
           priority
         />
       </div> */}
-        <div className="absolute inset-0 bg-teal-900 opacity-80"></div>
+        <div  className="absolute inset-0 bg-sky-800 border-t-2 border-sky-700 px-4"></div>
 
         <div className="relative z-10 container mx-auto px-4">
           <div className="  text-center">

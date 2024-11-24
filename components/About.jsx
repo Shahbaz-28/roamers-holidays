@@ -1,28 +1,31 @@
-'use client'
+"use client";
 
-import { Users, Rocket, Target, ChevronDown } from 'lucide-react'
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import Image from 'next/image'
+import { Users, Rocket, Target, ChevronDown } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import Image from "next/image";
 
 export default function About() {
   const features = [
     {
       icon: <Users className="w-12 h-12 text-blue-600 mb-4" />,
       title: "Great Team Work",
-      description: "Our passionate team of travel experts works tirelessly to curate unforgettable experiences for every adventurer. We believe in the power of collaboration to bring you the best travel solutions."
+      description:
+        "Our passionate team of travel experts works tirelessly to curate unforgettable experiences for every adventurer. We believe in the power of collaboration to bring you the best travel solutions.",
     },
     {
       icon: <Rocket className="w-12 h-12 text-blue-600 mb-4" />,
       title: "Our Vision",
-      description: "We envision a world where everyone can explore the beauty of our planet, creating lasting memories and fostering cultural understanding. Our goal is to make travel accessible, sustainable, and enriching for all."
+      description:
+        "We envision a world where everyone can explore the beauty of our planet, creating lasting memories and fostering cultural understanding. Our goal is to make travel accessible, sustainable, and enriching for all.",
     },
     {
       icon: <Target className="w-12 h-12 text-blue-600 mb-4" />,
       title: "Our Mission",
-      description: "We&apos;re committed to inspiring and empowering travelers by providing exceptional service, innovative travel solutions, and fostering responsible tourism. We're dedicated to creating positive impacts on the communities we visit."
-    }
-  ]
+      description:
+        "We&apos;re committed to inspiring and empowering travelers by providing exceptional service, innovative travel solutions, and fostering responsible tourism. We're dedicated to creating positive impacts on the communities we visit.",
+    },
+  ];
 
   return (
     <div className="w-full">
@@ -38,17 +41,19 @@ export default function About() {
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-transparent" />
         </div>
         <div className="relative h-full flex flex-col items-center justify-center text-center text-[#FCFCD8]">
-          <h1 className="text-5xl md:text-7xl font-bold mb-1 animate-fade-in-down">About Us</h1>
+          <h1 className="text-5xl md:text-7xl font-bold mb-1 animate-fade-in-down">
+            About Us
+          </h1>
           <p className="f-Nohemi-Light-BF6438cc583f70b text-xl md:text-2xl max-w-2xl mx-auto px-4 mb-8 animate-fade-in-up">
             Your Gateway to Unforgettable Adventures
           </p>
-          <Button 
-            variant="outline" 
+          <Button
+            variant="outline"
             size="lg"
             className="bg-[#30303066] backdrop-blur-lg text-[#FCFCD8] font-bold border-[1px] border-[#FCFCD80F] transition-all duration-300 px-6 rounded-[8px]"
             onClick={() => {
-              const featuresSection = document.getElementById('features')
-              featuresSection?.scrollIntoView({ behavior: 'smooth' })
+              const featuresSection = document.getElementById("features");
+              featuresSection?.scrollIntoView({ behavior: "smooth" });
             }}
           >
             Discover Our Story
@@ -59,11 +64,13 @@ export default function About() {
 
       {/* Features Section */}
       <div id="features" className="container mx-auto px-4 py-20">
-        <h2 className="text-3xl md:text-4xl font-bold text-blue-900 text-center mb-12">Why Choose Us</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-blue-900 text-center mb-12">
+          Why Choose Us
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 poppins-regular">
           {features.map((feature, index) => (
-            <Card 
-              key={index} 
+            <Card
+              key={index}
               className="overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 bg-white group hover:-translate-y-2"
             >
               <CardContent className="p-8 flex flex-col items-center text-center">
@@ -101,9 +108,20 @@ export default function About() {
             </div>
             <Card className="bg-white p-8 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
               <CardContent>
-                <div className="text-6xl text-blue-600 mb-4 transition-transform duration-300 hover:scale-110">&quot;</div>
+                <div className="text-6xl text-blue-600 mb-4 transition-transform duration-300 hover:scale-110">
+                  &quot;
+                </div>
                 <blockquote className="text-lg text-gray-700 mb-6 transition-all duration-300 hover:text-gray-800">
-                  My journey with this travel company was nothing short of amazing. From the breathtaking views of the Swiss Alps to the vibrant culture of Thailand, every moment was carefully curated to provide an unforgettable experience. The team&apos;s attention to detail and passion for travel truly shines through in every aspect of their service.
+                  Roamers Holidays is a travel company that provides Domestic &
+                  International customized holiday tour packages, Air tickets,
+                  visas, Hotels, Car rental for Corporate & leisure travel
+                  management with our 35+ years of experience in the travel and
+                  tourism industry. We understand Corporate travel requirements
+                  and expectations, as we have 35+ years collective experience
+                  of Corporate travel in Domestic as well as International
+                  segments. Keeping in mind all the travel regulations,
+                  guidelines and requirements, we always serve our clients on
+                  high priority with our best knowledge in the industry.
                 </blockquote>
                 <div className="flex items-center">
                   <Image
@@ -114,7 +132,9 @@ export default function About() {
                     className="w-16 h-16 rounded-full object-cover mr-4 border-4 border-blue-600 transition-transform duration-300 hover:scale-105"
                   />
                   <div>
-                    <div className="font-bold text-blue-900 text-lg transition-colors duration-300 hover:text-blue-600">Vishal</div>
+                    <div className="font-bold text-blue-900 text-lg transition-colors duration-300 hover:text-blue-600">
+                      Vishal
+                    </div>
                     <div className="text-sm text-gray-600">Founder</div>
                   </div>
                 </div>
@@ -124,5 +144,5 @@ export default function About() {
         </div>
       </div>
     </div>
-  )
+  );
 }

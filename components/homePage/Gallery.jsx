@@ -1,46 +1,105 @@
-"use client"
+"use client";
 
-import Image from "next/image"
-import { Card, CardContent } from "@/components/ui/card"
-import { useState } from "react"
+import Image from "next/image";
+import { Card, CardContent } from "@/components/ui/card";
+import { useState } from "react";
 
 const destinations = [
-  { name: "Bali", image: "/images/bali.svg", description: "Experience the beauty of Balinese temples and lush landscapes." },
-  { name: "Italy", image: "/images/italy.svg", description: "Discover the rich history and stunning architecture of Italy." },
-  { name: "Paris", image: "/images/paris.svg", description: "Immerse yourself in the romantic atmosphere of the City of Light." },
-]
+  {
+    name: "Estaing",
+    location: "France",
+    image: "/images/paris.svg",
+    description:
+      "Medieval charm meets modern comfort in this historic French village.",
+    size: "tall",
+  },
+  {
+    name: "Vik",
+    location: "Myrda",
+    image: "/images/italy.svg",
+    description:
+      "Dramatic black sand beaches and stunning coastal views await.",
+    size: "medium",
+  },
+  {
+    name: "Hamnoy Village",
+    location: "Norway",
+    image: "/images/bali.svg",
+    description: "Experience the breathtaking beauty of the Lofoten Islands.",
+    size: "medium",
+  },
+  {
+    name: "Montego Bay",
+    location: "Jamaica",
+    image: "/images/paris.svg",
+    description: "Crystal clear waters and vibrant culture in paradise.",
+    size: "wide",
+  },
+];
 
-export default function Gallery() {
-  const [hoveredDestination, setHoveredDestination] = useState(null)
+export default function DestinationsGallery() {
+  const [hoveredDestination, setHoveredDestination] = useState(null);
 
   return (
-    <div className="container mx-auto px-2 py-8">
-      <div className="text-center mb-8">
-        <h1 className="text-[40px] font-bold text-sky-900">Unforgettable Moments</h1>
-        <p className="f-Nohemi-Light-BF6438cc583f70b text-[16px] text-gray-600">Explore our curated collection of breathtaking destinations</p>
+    <section className="container mx-auto px-4 py-10">
+      <div className="text-center mb-12 flex flex-col justify-center items-center">
+        <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4 text-sky-900 leading-tight">
+          More Destinations
+        </h1>
+        <p className="text-sm sm:text-base text-gray-600 max-w-lg mx-auto lg:mx-0 leading-relaxed">
+          Your peace of mind doesn&apos;t have to be tied to where everyone else is.
+          We offer a wide range of travel and relocation destinations. Take your
+          time to find the one that&apos;s perfect for you.
+        </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {destinations.map((destination, index) => (
-          <Card 
-            key={destination.name} 
-            className={`relative overflow-hidden ${index === 0 ? 'md:row-span-2' : ''} group`}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 auto-rows-[300px]">
+        {destinations.map((destination) => (
+          <Card
+            key={destination.name}
+            className={`group relative overflow-hidden transition-transform duration-300 hover:shadow-lg
+              ${destination.size === "tall" ? "row-span-2" : ""}
+              ${destination.size === "wide" ? "lg:col-span-2" : ""}
+            `}
             onMouseEnter={() => setHoveredDestination(destination.name)}
             onMouseLeave={() => setHoveredDestination(null)}
           >
             <CardContent className="p-0 h-full">
-              <div className={`relative h-full ${index === 0 ? 'aspect-[3/4] md:aspect-auto' : 'aspect-[16/9]'}`}>
+              <div className="relative h-full w-full">
                 <Image
                   src={destination.image}
-                  alt={`Scenic view of ${destination.name}`}
+                  alt={`Scenic view of ${destination.name}, ${destination.location}`}
                   fill
-                  loading="lazy"
-                  className="object-cover transition-transform duration-300 group-hover:scale-110"
+                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  sizes={
+                    destination.size === "wide"
+                      ? "(max-width: 768px) 100vw, 66vw"
+                      : "(max-width: 768px) 100vw, 33vw"
+                  }
+                  priority={destination.size === "tall"}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent transition-opacity duration-300 group-hover:opacity-80" />
-                <div className="absolute inset-0 flex flex-col justify-end p-6 transition-transform duration-300 group-hover:translate-y-0">
-                  <h2 className="f-Nohemi-Light-BF6438cc583f70b text-white text-2xl font-bold mb-2">{destination.name}</h2>
-                  <p className={`f-Nohemi-Light-BF6438cc583f70b text-white text-sm opacity-0 transition-opacity duration-300 ${hoveredDestination === destination.name ? 'opacity-100' : ''}`}>
+                <div
+                  className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-60 transition-opacity duration-300 group-hover:opacity-80"
+                  aria-hidden="true"
+                />
+                <div className="absolute inset-0 p-6 flex flex-col justify-end text-white">
+                  <div className="transform transition-transform duration-300 group-hover:-translate-y-2">
+                    <h3 className="text-2xl font-bold mb-1">
+                      {destination.name}
+                    </h3>
+                    <p className="text-sm text-white/80">
+                      {destination.location}
+                    </p>
+                  </div>
+                  <p
+                    className={`mt-2 text-sm line-clamp-2 transform transition-all duration-300
+                      ${
+                        hoveredDestination === destination.name
+                          ? "opacity-100 translate-y-0"
+                          : "opacity-0 translate-y-4"
+                      }
+                    `}
+                  >
                     {destination.description}
                   </p>
                 </div>
@@ -49,6 +108,6 @@ export default function Gallery() {
           </Card>
         ))}
       </div>
-    </div>
-  )
+    </section>
+  );
 }
