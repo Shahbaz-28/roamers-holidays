@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Search, Menu, X, ChevronRight } from 'lucide-react';
+import { Menu, X, ChevronRight } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 import {
@@ -13,14 +13,15 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
+import { Facebook, Instagram} from "lucide-react";
 
 const menuItems = [
   { title: "Home", href: "/" },
   {
     title: "Tours",
     items: [
-      { title: "International", href: "/packages/adventure" },
-      { title: "Domestic", href: "/packages/luxury" },
+      { title: "International", href: "/international" },
+      { title: "Domestic", href: "/domestic" },
     ],
   },
   { title: "About Us", href: "/about" },
@@ -53,13 +54,13 @@ export default function Navbar() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
-      <div className="bg-white/50 backdrop-blur-sm border-b border-gray-200">
+      <div className="bg-white/100 backdrop-blur-sm border-b border-gray-200">
         <div className="container mx-auto">
           <nav className="flex items-center justify-between h-16 px-4">
             {/* Logo */}
             <Link href="/" className="flex items-center space-x-2">
               <Image
-                src="/images/logo1.jpg"
+                src="/images/logoNav.jpg"
                 alt="Rebel Rover Logo"
                 width={120}
                 height={120}
@@ -108,14 +109,20 @@ export default function Navbar() {
 
             {/* Search and Mobile Menu Buttons */}
             <div className="flex items-center space-x-2">
-              <Button
-                variant="ghost"
-                size="icon"
-                className="text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+            <Link
+                href="#"
+                className="hover:text-teal-300 transition-colors duration-300"
               >
-                <Search className="h-5 w-5" />
-                <span className="sr-only">Search</span>
-              </Button>
+                <Facebook className="h-7 w-7" />
+                <span className="sr-only">Facebook</span>
+              </Link>
+              <Link
+                href="#"
+                className="hover:text-teal-300 transition-colors duration-300"
+              >
+                <Instagram className="h-7 w-7" />
+                <span className="sr-only">Instagram</span>
+              </Link>
 
               {/* Mobile Menu Button */}
               <Button

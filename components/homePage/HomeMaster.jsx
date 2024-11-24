@@ -1,16 +1,18 @@
 import React from "react";
 import Gallery from "./Gallery";
 import OurClient from "./OurClient";
-import Destination from "./Destination";
+import InternationalCard from "./InternationalCard";
 import Travel from "./Travel";
+import DomesticCard from './DomesticCard'
 
 const HomeMaster = () => {
   return (
     <div>
-      <Destination />
+      <OurClient />
+      <DomesticCard/>
+      <InternationalCard />
       <Travel />
       <Gallery />
-      <OurClient />
     </div>
   );
 };

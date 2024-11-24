@@ -16,8 +16,8 @@ export default function Gallery() {
   return (
     <div className="container mx-auto px-2 py-8">
       <div className="text-center mb-8">
-        <h1 className="text-4xl font-bold text-blue-900 mb-2">Unforgettable Moments</h1>
-        <p className="text-lg text-blue-700">Explore our curated collection of breathtaking destinations</p>
+        <h1 className="text-[40px] font-bold text-sky-900">Unforgettable Moments</h1>
+        <p className="f-Nohemi-Light-BF6438cc583f70b text-[16px] text-gray-600">Explore our curated collection of breathtaking destinations</p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -39,8 +39,8 @@ export default function Gallery() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent transition-opacity duration-300 group-hover:opacity-80" />
                 <div className="absolute inset-0 flex flex-col justify-end p-6 transition-transform duration-300 group-hover:translate-y-0">
-                  <h2 className="text-white text-2xl font-bold mb-2">{destination.name}</h2>
-                  <p className={`text-white text-sm opacity-0 transition-opacity duration-300 ${hoveredDestination === destination.name ? 'opacity-100' : ''}`}>
+                  <h2 className="f-Nohemi-Light-BF6438cc583f70b text-white text-2xl font-bold mb-2">{destination.name}</h2>
+                  <p className={`f-Nohemi-Light-BF6438cc583f70b text-white text-sm opacity-0 transition-opacity duration-300 ${hoveredDestination === destination.name ? 'opacity-100' : ''}`}>
                     {destination.description}
                   </p>
                 </div>
