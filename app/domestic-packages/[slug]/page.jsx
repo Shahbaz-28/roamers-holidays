@@ -1,12 +1,12 @@
 import React from "react";
-import domesticData from "@/DomesticData";
+import domesticPackages from "@/DomesticData";
 import Destination from "../../../components/homePage/InternationalCard";
 import DomesticPackg from "@/components/DomesticPackg"
 
 const Page = ({ params }) => {
   const { slug } = params;
 
-  const packageDetails = domesticData[slug];
+  const packageDetails = domesticPackages[slug];
 
   if (!packageDetails) {
     return <div>Package not found</div>;
