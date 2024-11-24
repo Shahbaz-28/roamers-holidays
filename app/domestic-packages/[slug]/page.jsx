@@ -1,5 +1,5 @@
 import React from "react";
-import domesticPackages from "@/DomesticData";
+import domesticPackages from "../../../domesticData";
 import Destination from "../../../components/homePage/InternationalCard";
 import DomesticPackg from "@/components/DomesticPackg"
 
