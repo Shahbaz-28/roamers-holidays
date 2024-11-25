@@ -60,7 +60,7 @@ function TravelPackagesDe({ details }) {
           <Card className="bg-white">
             <CardContent className="p-4 sm:p-6 flex flex-col items-center text-center">
               <Clock className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-[#0c4a6e] mb-2 sm:mb-4" />
-              <h3 className="text-lg sm:text-xl font-semibold mb-1 sm:mb-2">Duration</h3>
+              <h3 className="text-lg text-[#0c4a6e] sm:text-xl font-semibold mb-1 sm:mb-2">Duration</h3>
               <p className="text-sm sm:text-base text-gray-600">
                 {Object.keys(details.itinerary).length} Days
               </p>
@@ -69,14 +69,14 @@ function TravelPackagesDe({ details }) {
           <Card className="bg-white">
             <CardContent className="p-4 sm:p-6 flex flex-col items-center text-center">
               <MapPin className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-[#0c4a6e] mb-2 sm:mb-4" />
-              <h3 className="text-lg sm:text-xl font-semibold mb-1 sm:mb-2">Destinations</h3>
+              <h3 className="text-lg text-[#0c4a6e] sm:text-xl font-semibold mb-1 sm:mb-2">Destinations</h3>
               <p className="text-sm sm:text-base text-gray-600">{details.country}</p>
             </CardContent>
           </Card>
           <Card className="sm:col-span-2 md:col-span-1 bg-white">
             <CardContent className="p-4 sm:p-6 flex flex-col items-center text-center">
               <Star className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-[#0c4a6e] mb-2 sm:mb-4" />
-              <h3 className="text-lg sm:text-xl font-semibold mb-1 sm:mb-2">Experience</h3>
+              <h3 className="text-lg  text-[#0c4a6e]sm:text-xl font-semibold mb-1 sm:mb-2">Experience</h3>
               <p className="text-sm sm:text-base text-gray-600">Unforgettable</p>
             </CardContent>
           </Card>

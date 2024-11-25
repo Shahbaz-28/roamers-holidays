@@ -63,7 +63,7 @@ export default function OurClient() {
     <div className="mt-8 mb-14">
     <div className="container mx-auto border-[1px] rounded-[12px] py-6">
     <div className="text-center mb-8">
-        <h2 className="f-Nohemi-Light-BF6438cc583f70b text-4xl font-bold mb-4 text-blue-900 pt-4">Our tour partner</h2>
+        <h2 className="f-Nohemi-Light-BF6438cc583f70b text-4xl font-bold mb-4 text-sky-900 pt-4">Our tour partner</h2>
         {/* <p className=" text-blue-700">
           There are many variation of passage of lorem ipsum available but
           <br />
