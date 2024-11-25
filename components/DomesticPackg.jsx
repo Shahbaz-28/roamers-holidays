@@ -6,15 +6,11 @@ import { Button } from "@/components/ui/button";
 import {
   MapPin,
   Calendar,
-  Utensils,
-  Home,
-  Eye,
   Truck,
   ChevronUp,
   Star,
   Clock,
 } from "lucide-react";
-import { cn } from "@/lib/utils";
 
 function DomesticPackg({ details }) {
   const [showScrollTop, setShowScrollTop] = useState(false);
@@ -31,7 +27,9 @@ function DomesticPackg({ details }) {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  console.log("data", details);
+  // Debugging the details object
+  console.log("details", details);
+  console.log("Itinerary length:", Object.keys(details.itinerary).length);
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -112,8 +110,9 @@ function DomesticPackg({ details }) {
             Your Adventure Awaits
           </h2>
           <div className="space-y-4 sm:space-y-6 md:space-y-8">
-            {Object.entries(details.itinerary).map(
-              ([day, itinerary], index) => (
+            {Object.entries(details.itinerary).map(([day, itinerary], index) => {
+              console.log(`Rendering Day ${index + 1}:`, itinerary); // Debugging each day of the itinerary
+              return (
                 <div key={day} className="flex">
                   <div className="flex flex-col items-center mr-2 sm:mr-4">
                     <div className="rounded-full bg-[#0c4a6e] text-white w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center font-bold text-sm sm:text-base">
@@ -134,8 +133,8 @@ function DomesticPackg({ details }) {
                     </CardContent>
                   </Card>
                 </div>
-              )
-            )}
+              );
+            })}
           </div>
         </section>
 
@@ -146,31 +145,11 @@ function DomesticPackg({ details }) {
             {Object.entries(details.inclusions).map(([key, value]) => (
               <Card key={key} className="overflow-hidden bg-white">
                 <CardContent className="p-4 sm:p-6 flex items-center space-x-3 sm:space-x-6">
-                  <div className="bg-[#0c4a6e] bg-opacity-10 p-2 sm:p-4 rounded-full">
-                    {key === "accommodation" && (
-                      <Home className="w-6 h-6 sm:w-8 sm:h-8 text-[#0c4a6e]" />
-                    )}
-                    {key === "mealPlan" && (
-                      <Utensils className="w-6 h-6 sm:w-8 sm:h-8 text-[#0c4a6e]" />
-                    )}
-                    {key === "sightseeing" && (
-                      <Eye className="w-6 h-6 sm:w-8 sm:h-8 text-[#0c4a6e]" />
-                    )}
-                    {key === "transfers" && (
-                      <Truck className="w-6 h-6 sm:w-8 sm:h-8 text-[#0c4a6e]" />
-                    )}
+                  <div className="bg-[#0c4a6e] bg-opacity-10 p-3 rounded-full">
+                    <Truck className="w-8 h-8 sm:w-10 sm:h-10 text-[#0c4a6e]" />
                   </div>
                   <div>
-                    <h3 className="text-base sm:text-lg md:text-xl font-semibold capitalize mb-1 sm:mb-2 text-[#0c4a6e]">
-                      {key}
-                    </h3>
-                    <p className="text-sm sm:text-base text-gray-600">
-                      {typeof value === "boolean"
-                        ? value
-                          ? "Included"
-                          : "Not included"
-                        : value}
-                    </p>
+                    <h3 className="text-lg sm:text-xl font-semibold text-[#0c4a6e]">{value}</h3>
                   </div>
                 </CardContent>
               </Card>
@@ -179,24 +158,17 @@ function DomesticPackg({ details }) {
         </section>
       </div>
 
-      {/* Floating buttons */}
-      <div
-        className={cn(
-          "fixed bottom-4 sm:bottom-6 md:bottom-8 lg:bottom-10 right-4 sm:right-6 md:right-8 lg:right-10 transition-opacity duration-300",
-          showScrollTop ? "opacity-100" : "opacity-0"
-        )}
-      >
+      {/* Scroll to Top Button */}
+      {showScrollTop && (
         <Button
-          size="icon"
           onClick={scrollToTop}
-          className="rounded-full w-10 h-10 sm:w-12 sm:h-12 shadow-lg bg-[#0c4a6e] hover:bg-[#7dd3fc] text-white hover:text-[#0c4a6e] transition-colors duration-300"
+          className="fixed bottom-4 right-4 w-12 h-12 bg-[#0c4a6e] rounded-full flex items-center justify-center text-white"
         >
-          <ChevronUp className="w-5 h-5 sm:w-6 sm:h-6" />
+          <ChevronUp />
         </Button>
-      </div>
+      )}
     </div>
   );
 }
 
 export default DomesticPackg;
-

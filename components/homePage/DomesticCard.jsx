@@ -2,7 +2,14 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
-import { Plane, Calendar, ChevronRight, Utensils, BedDouble } from 'lucide-react';import Image from "next/image";
+import {
+  Plane,
+  Calendar,
+  ChevronRight,
+  Utensils,
+  BedDouble,
+} from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import domesticPackages from "../../domesticData";
 
@@ -16,10 +23,10 @@ export default function DomesticCard() {
   return (
     <section className="container mx-auto py-8 sm:py-12 mt-6">
       <div className="text-center mb-8 sm:mb-12">
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 text-sky-900 leading-tight">
-          Discover the Beauty of India
+        <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-4 text-sky-900 leading-tight">
+          Discover the Beauty of <span className="block lg:inline">India</span>
         </h2>
-        <p className="text-lg sm:text-xl text-sky-700 max-w-2xl mx-auto">
+        <p className="text-base md:text-lg lg:text-xl text-sky-700 max-w-2xl mx-auto leading-relaxed">
           Embark on unforgettable domestic tours and create lasting memories
         </p>
       </div>

@@ -17,14 +17,16 @@ export default function InternationalCard() {
 
   return (
     <section className="container mx-auto py-8 sm:py-8 mt-2">
-      <div className="text-center mb-8 sm:mb-12">
-        <h2 className="text-3xl px- sm:text-4xl lg:text-5xl font-bold mb-4 text-sky-900 leading-tight">
-          Journey to the World&apos;s Most <br /> Iconic Destinations
-        </h2>
-        <p className="text-lg sm:text-xl text-sky-700 max-w-2xl mx-auto">
-          Explore breathtaking international tours and create unforgettable memories
-        </p>
-      </div>
+    <div className="text-center mb-8 sm:mb-12">
+  <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-4 text-sky-900 leading-tight">
+    Journey to the World&apos;s Most <br className="hidden lg:block" /> Iconic
+    Destinations
+  </h2>
+  <p className="text-base md:text-lg lg:text-xl text-sky-700 max-w-2xl mx-auto leading-relaxed">
+    Explore breathtaking international tours and create unforgettable memories
+  </p>
+</div>
+
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mx-2 lg:mx-0">
         {cardDetails.slice(0, 6).map((destination, index) => (
