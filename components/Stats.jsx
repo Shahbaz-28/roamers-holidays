@@ -1,5 +1,4 @@
 "use client";
-
 import { useState, useEffect } from "react";
 import { Users, User, Mountain, Medal } from "lucide-react";
 import Image from "next/image";

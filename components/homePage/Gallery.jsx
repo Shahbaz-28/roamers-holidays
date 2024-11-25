@@ -8,7 +8,7 @@ const destinations = [
   {
     name: "Estaing",
     location: "France",
-    image: "/images/paris.svg",
+    image: "/images/place4.jpg",
     description:
       "Medieval charm meets modern comfort in this historic French village.",
     size: "tall",
@@ -16,7 +16,7 @@ const destinations = [
   {
     name: "Vik",
     location: "Myrda",
-    image: "/images/italy.svg",
+    image: "/images/place3.jpg",
     description:
       "Dramatic black sand beaches and stunning coastal views await.",
     size: "medium",
@@ -24,14 +24,14 @@ const destinations = [
   {
     name: "Hamnoy Village",
     location: "Norway",
-    image: "/images/bali.svg",
+    image: "/images/place2.jpg",
     description: "Experience the breathtaking beauty of the Lofoten Islands.",
     size: "medium",
   },
   {
     name: "Montego Bay",
     location: "Jamaica",
-    image: "/images/paris.svg",
+    image: "/images/place1.jpg",
     description: "Crystal clear waters and vibrant culture in paradise.",
     size: "wide",
   },
@@ -44,7 +44,7 @@ export default function DestinationsGallery() {
     <section className="container mx-auto px-4 py-10">
       <div className="text-center mb-12 flex flex-col justify-center items-center">
         <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4 text-sky-900 leading-tight">
-          More Destinations
+          Making Every Trip a Happy Story!
         </h1>
         <p className="text-sm sm:text-base text-gray-600 max-w-lg mx-auto lg:mx-0 leading-relaxed">
           Your peace of mind doesn&apos;t have to be tied to where everyone else is.
@@ -82,26 +82,22 @@ export default function DestinationsGallery() {
                   className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-60 transition-opacity duration-300 group-hover:opacity-80"
                   aria-hidden="true"
                 />
-                <div className="absolute inset-0 p-6 flex flex-col justify-end text-white">
-                  <div className="transform transition-transform duration-300 group-hover:-translate-y-2">
+                <div className="absolute inset-0 p-4 flex flex-col justify-end text-white">
+                  <div className={`transform transition-all duration-300 ${
+                    hoveredDestination === destination.name ? 'translate-y-0' : 'translate-y-8'
+                  }`}>
                     <h3 className="text-2xl font-bold mb-1">
                       {destination.name}
                     </h3>
-                    <p className="text-sm text-white/80">
+                    <p className="text-sm text-white/80 mb-2">
                       {destination.location}
                     </p>
+                    <p className={`text-sm line-clamp-3 transition-opacity duration-300 ${
+                      hoveredDestination === destination.name ? 'opacity-100' : 'opacity-0'
+                    }`}>
+                      {destination.description}
+                    </p>
                   </div>
-                  <p
-                    className={`mt-2 text-sm line-clamp-2 transform transition-all duration-300
-                      ${
-                        hoveredDestination === destination.name
-                          ? "opacity-100 translate-y-0"
-                          : "opacity-0 translate-y-4"
-                      }
-                    `}
-                  >
-                    {destination.description}
-                  </p>
                 </div>
               </div>
             </CardContent>
@@ -111,3 +107,4 @@ export default function DestinationsGallery() {
     </section>
   );
 }
+

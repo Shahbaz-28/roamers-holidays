@@ -31,10 +31,10 @@ function TravelPackagesDe({ details }) {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  console.log("data",details)
+  console.log("data", details);
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
       <div id="overview" className="relative h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[80vh] xl:h-[100vh] overflow-hidden">
         <Image
@@ -44,7 +44,7 @@ function TravelPackagesDe({ details }) {
           objectFit="cover"
           className="w-full h-full"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black flex flex-col justify-end p-4 sm:p-6 md:p-8 lg:p-12 xl:p-16">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#0c4a6e] flex flex-col justify-end p-4 sm:p-6 md:p-8 lg:p-12 xl:p-16">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-2 sm:mb-4">
             {details.country}
           </h1>
@@ -57,25 +57,25 @@ function TravelPackagesDe({ details }) {
       <div className="max-w-6xl mx-auto space-y-8 sm:space-y-12 md:space-y-16 py-8 sm:py-12 md:py-16 px-4 sm:px-6 md:px-8 lg:px-0">
         {/* Quick Overview Section */}
         <section className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
-          <Card>
+          <Card className="bg-white">
             <CardContent className="p-4 sm:p-6 flex flex-col items-center text-center">
-              <Clock className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-primary mb-2 sm:mb-4" />
+              <Clock className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-[#0c4a6e] mb-2 sm:mb-4" />
               <h3 className="text-lg sm:text-xl font-semibold mb-1 sm:mb-2">Duration</h3>
               <p className="text-sm sm:text-base text-gray-600">
                 {Object.keys(details.itinerary).length} Days
               </p>
             </CardContent>
           </Card>
-          <Card>
+          <Card className="bg-white">
             <CardContent className="p-4 sm:p-6 flex flex-col items-center text-center">
-              <MapPin className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-primary mb-2 sm:mb-4" />
+              <MapPin className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-[#0c4a6e] mb-2 sm:mb-4" />
               <h3 className="text-lg sm:text-xl font-semibold mb-1 sm:mb-2">Destinations</h3>
               <p className="text-sm sm:text-base text-gray-600">{details.country}</p>
             </CardContent>
           </Card>
-          <Card className="sm:col-span-2 md:col-span-1">
+          <Card className="sm:col-span-2 md:col-span-1 bg-white">
             <CardContent className="p-4 sm:p-6 flex flex-col items-center text-center">
-              <Star className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-primary mb-2 sm:mb-4" />
+              <Star className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-[#0c4a6e] mb-2 sm:mb-4" />
               <h3 className="text-lg sm:text-xl font-semibold mb-1 sm:mb-2">Experience</h3>
               <p className="text-sm sm:text-base text-gray-600">Unforgettable</p>
             </CardContent>
@@ -83,16 +83,19 @@ function TravelPackagesDe({ details }) {
         </section>
 
         {/* Price and Booking Section */}
-        <Card className="border-2 border-primary shadow-lg">
+        <Card className="border-2 border-[#0c4a6e] shadow-lg bg-white">
           <CardContent className="p-4 sm:p-6 md:p-8 flex flex-col sm:flex-row justify-between items-center">
             <div className="text-center sm:text-left mb-4 sm:mb-0">
-              <p className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary">
+              <p className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#0c4a6e]">
                 ₹{details.price.toLocaleString()}
               </p>
               <p className="text-base sm:text-lg md:text-xl text-gray-600">per person</p>
             </div>
             <div className="space-y-2 w-full sm:w-auto">
-              <Button size="lg" className="text-base sm:text-lg px-6 sm:px-8 w-full sm:w-auto">
+              <Button 
+                size="lg" 
+                className="text-base sm:text-lg px-6 sm:px-8 w-full sm:w-auto bg-[#0c4a6e] hover:bg-[#7dd3fc] text-white hover:text-[#0c4a6e] transition-colors duration-300"
+              >
                 Book Now
               </Button>
               <p className="text-xs sm:text-sm text-gray-500 text-center">
@@ -104,8 +107,8 @@ function TravelPackagesDe({ details }) {
 
         {/* Itinerary Section */}
         <section id="itinerary">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 flex items-center">
-            <Calendar className="mr-2 sm:mr-4 text-primary w-6 h-6 sm:w-8 sm:h-8" />
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 flex items-center text-[#0c4a6e]">
+            <Calendar className="mr-2 sm:mr-4 text-[#0c4a6e] w-6 h-6 sm:w-8 sm:h-8" />
             Your Adventure Awaits
           </h2>
           <div className="space-y-4 sm:space-y-6 md:space-y-8">
@@ -113,16 +116,16 @@ function TravelPackagesDe({ details }) {
               ([day, itinerary], index) => (
                 <div key={day} className="flex">
                   <div className="flex flex-col items-center mr-2 sm:mr-4">
-                    <div className="rounded-full bg-primary text-white w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center font-bold text-sm sm:text-base">
+                    <div className="rounded-full bg-[#0c4a6e] text-white w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center font-bold text-sm sm:text-base">
                       {index + 1}
                     </div>
                     {index < Object.entries(details.itinerary).length - 1 && (
-                      <div className="h-full w-0.5 bg-primary mt-2"></div>
+                      <div className="h-full w-0.5 bg-[#0c4a6e] mt-2"></div>
                     )}
                   </div>
-                  <Card className="flex-grow">
+                  <Card className="flex-grow bg-white">
                     <CardHeader className="p-3 sm:p-4 md:p-6">
-                      <CardTitle className="text-lg sm:text-xl md:text-2xl font-semibold">
+                      <CardTitle className="text-lg sm:text-xl md:text-2xl font-semibold text-[#0c4a6e]">
                         Day {index + 1}: {itinerary.title}
                       </CardTitle>
                     </CardHeader>
@@ -138,27 +141,27 @@ function TravelPackagesDe({ details }) {
 
         {/* Inclusions Section */}
         <section id="inclusions">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8">What&apos;s Included</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-[#0c4a6e]">What&apos;s Included</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
             {Object.entries(details.inclusions).map(([key, value]) => (
-              <Card key={key} className="overflow-hidden">
+              <Card key={key} className="overflow-hidden bg-white">
                 <CardContent className="p-4 sm:p-6 flex items-center space-x-3 sm:space-x-6">
-                  <div className="bg-primary bg-opacity-10 p-2 sm:p-4 rounded-full">
+                  <div className="bg-[#0c4a6e] bg-opacity-10 p-2 sm:p-4 rounded-full">
                     {key === "accommodation" && (
-                      <Home className="w-6 h-6 sm:w-8 sm:h-8 text-primary" />
+                      <Home className="w-6 h-6 sm:w-8 sm:h-8 text-[#0c4a6e]" />
                     )}
                     {key === "mealPlan" && (
-                      <Utensils className="w-6 h-6 sm:w-8 sm:h-8 text-primary" />
+                      <Utensils className="w-6 h-6 sm:w-8 sm:h-8 text-[#0c4a6e]" />
                     )}
                     {key === "sightseeing" && (
-                      <Eye className="w-6 h-6 sm:w-8 sm:h-8 text-primary" />
+                      <Eye className="w-6 h-6 sm:w-8 sm:h-8 text-[#0c4a6e]" />
                     )}
                     {key === "transfers" && (
-                      <Truck className="w-6 h-6 sm:w-8 sm:h-8 text-primary" />
+                      <Truck className="w-6 h-6 sm:w-8 sm:h-8 text-[#0c4a6e]" />
                     )}
                   </div>
                   <div>
-                    <h3 className="text-base sm:text-lg md:text-xl font-semibold capitalize mb-1 sm:mb-2">
+                    <h3 className="text-base sm:text-lg md:text-xl font-semibold capitalize mb-1 sm:mb-2 text-[#0c4a6e]">
                       {key}
                     </h3>
                     <p className="text-sm sm:text-base text-gray-600">
@@ -186,7 +189,7 @@ function TravelPackagesDe({ details }) {
         <Button
           size="icon"
           onClick={scrollToTop}
-          className="rounded-full w-10 h-10 sm:w-12 sm:h-12 shadow-lg"
+          className="rounded-full w-10 h-10 sm:w-12 sm:h-12 shadow-lg bg-[#0c4a6e] hover:bg-[#7dd3fc] text-white hover:text-[#0c4a6e] transition-colors duration-300"
         >
           <ChevronUp className="w-5 h-5 sm:w-6 sm:h-6" />
         </Button>
